@@ -1,0 +1,17 @@
+spring:
+  spring:
+    datasource:
+      url: ${{ Postgres.DATABASE_URL }}
+      username: ${PGUSER}
+      password: ${PGPASSWORD}
+      driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+
+  sql:
+    init:
+      mode: always
